@@ -1,7 +1,7 @@
 import sharp from 'sharp';
 
 const W = 1200, H = 630;
-const NAME = 'Elhaddad';
+const NAME = 'Mehmet Demirci';
 const ROLE = 'AI Solutions Engineer';
 const LINE1 = 'LLM agent systems, retrieval pipelines,';
 const LINE2 = 'and computer vision that runs in production.';
@@ -48,7 +48,7 @@ const bg = `
         font-size="27" fill="#a5a2ae">${esc(LINE2)}</text>
 
   <text x="90" y="527" font-family="Menlo, Consolas, monospace"
-        font-size="23" letter-spacing="2" fill="#6d6a78">alhaddad.dev</text>
+        font-size="23" letter-spacing="2" fill="#6d6a78">mdemirci.dev</text>
 </svg>`;
 
 // Portrait, cropped to the rounded panel on the right.

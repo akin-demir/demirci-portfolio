@@ -119,7 +119,9 @@ const shown = featured.length > 0 ? featured : all.slice(0, 3);
           <span class="pub-title">
             {pub.url ? <a href={pub.url}>{pub.title}</a> : pub.title}
           </span>
-          <span class="pub-venue">{pub.venue} &middot; {pub.year}</span>
+          <span class="pub-venue">
+            {pub.author} &middot; {pub.venue} &middot; {pub.year}
+          </span>
         </li>
       ))}
     </ol>

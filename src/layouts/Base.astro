@@ -31,7 +31,10 @@ const personSchema = {
   url: Astro.site?.toString(),
   image: ogImage.toString(),
   description: site.tagline,
-  address: { '@type': 'PostalAddress', addressCountry: site.location },
+  workLocation: [
+    { '@type': 'Country', name: 'Turkey' },
+    { '@type': 'Country', name: 'United Arab Emirates' },
+  ],
   sameAs: site.links.filter((l) => l.url.startsWith('http')).map((l) => l.url),
   worksFor: site.experience.slice(0, 1).map((job) => ({
     '@type': 'Organization',

@@ -7,7 +7,7 @@ import site from '../../content/site.json';
 // same content collection the pages use, so it can't drift out of sync.
 // Spec: https://llmstxt.org
 export const GET: APIRoute = async () => {
-  const base = 'https://alhaddad.dev';
+  const base = 'https://mdemirci.dev';
   const projects = (await getCollection('projects')).sort(
     (a, b) => a.data.order - b.data.order,
   );
@@ -36,7 +36,9 @@ export const GET: APIRoute = async () => {
     '',
     '## Publications',
     '',
-    ...site.publications.map((p) => `- [${p.title}](${p.url}) — ${p.venue}, ${p.year}`),
+    ...site.publications.map(
+      (p) => `- [${p.title}](${p.url}) — ${p.author}, ${p.venue}, ${p.year}`,
+    ),
     '',
     '## Pages',
     '',

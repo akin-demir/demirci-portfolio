@@ -1,6 +1,6 @@
 {
-  "name": "Elhaddad",
-  "firstName": "Elhaddad",
+  "name": "Mehmet Demirci",
+  "firstName": "Mehmet",
   "role": "AI Solutions Engineer",
   "available": false,
   "availableLabel": "Open to new roles",
@@ -8,7 +8,7 @@
     "lead": "I build AI systems that",
     "emphasis": "survive production"
   },
-  "location": "Germany",
+  "location": "Turkey, UAE & remotely available worldwide",
   "resume": "/files/cv.pdf",
   "tagline": "Seven years building AI systems that run in production: LLM agents, retrieval pipelines, and computer vision on real hardware under real load.",
   "about": [
@@ -19,7 +19,7 @@
   "links": [
     {
       "label": "Connect on LinkedIn",
-      "url": "https://www.linkedin.com/in/alhaddad-mohamad-375532117/",
+      "url": "https://www.linkedin.com/in/elhaddad-%F0%9F%92%A1-375532117/?locale=tr-TR",
       "primary": true
     }
   ],
@@ -98,7 +98,7 @@
       "org": "innoscripta SE",
       "location": "Germany · Hybrid",
       "start": "Oct 2021",
-      "end": "Present",
+      "end": "Sep 2026",
       "summary": "Agentic extraction and document intelligence at enterprise scale.",
       "points": [
         "Built the agentic extraction pipeline behind a knowledge graph of European enterprise data: LLM agents deciding what to pull, NLP models resolving entities, and the results landing somewhere you can actually query.",
@@ -123,18 +123,21 @@
   "publications": [
     {
       "title": "Incident Detection on Junction Using Image Processing",
+      "author": "Mehmet Demirci",
       "venue": "arXiv preprint 2104.13437",
       "year": 2021,
       "url": "https://arxiv.org/abs/2104.13437"
     },
     {
       "title": "Application of the Neural Network Dependability Kit in Real-World Environments",
+      "author": "Mehmet Demirci",
       "venue": "arXiv preprint 2012.09602",
       "year": 2020,
       "url": "https://arxiv.org/abs/2012.09602"
     },
     {
       "title": "Aiming for Smart Wind Energy",
+      "author": "Mehmet Demirci",
       "venue": "Transactions on Emerging Telecommunications Technologies",
       "year": 2019,
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ett.3749"
@@ -159,10 +162,6 @@
     },
     {
       "name": "Turkish",
-      "level": "Native"
-    },
-    {
-      "name": "Arabic",
       "level": "Native"
     },
     {
