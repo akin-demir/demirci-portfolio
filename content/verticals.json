@@ -1,0 +1,53 @@
+{
+  "heading": "Experience, in the real world",
+  "intro": "From roadside hardware to enterprise workflows. Explore the environments where I have delivered AI systems.",
+  "sceneLabel": "Illustrative scene",
+  "workLabel": "Explore the work",
+  "footageHeading": "See the systems in action",
+  "footageIntro": "Original project footage and detection output from road and rail systems.",
+  "watch": "Watch demo",
+  "close": "Close preview",
+  "image": "View image",
+  "verticals": [
+    {
+      "title": "Public Safety & Intelligent Transport",
+      "summary": "Vision that watches the road. Systems that help operators respond.",
+      "detail": "Edge inference, incident detection and roadside information systems deployed across highways, tunnels and rail crossings.",
+      "proof": "Türkiye · Serbia",
+      "skills": [
+        "Computer vision",
+        "Edge inference",
+        "Embedded systems"
+      ]
+    },
+    {
+      "title": "Enterprise AI & Automation",
+      "summary": "Messy inputs. Structured knowledge. Useful decisions.",
+      "detail": "Document intelligence, agentic knowledge pipelines and business automation, built to integrate into everyday operations.",
+      "proof": "€60,000+ saved · 90%+ field accuracy",
+      "skills": [
+        "Document AI",
+        "Knowledge graphs",
+        "LLM agents"
+      ]
+    },
+    {
+      "title": "Industrial Vision & Logistics",
+      "summary": "From depth data to decisions on the terminal floor.",
+      "detail": "ML over 3D container captures, working with new sensing hardware to improve throughput and reduce misreads.",
+      "proof": "Istanbul port · Intel",
+      "skills": [
+        "3D scanning",
+        "Depth sensing",
+        "Industrial ML"
+      ]
+    }
+  ],
+  "media": [
+    "Rail crossing · vehicle detection & foreground mask",
+    "Highway · vehicle tracking",
+    "Highway · vehicle detection",
+    "Junction · nighttime detection"
+  ],
+  "audio": "Meeting audio research · TTS & noise suppression"
+}

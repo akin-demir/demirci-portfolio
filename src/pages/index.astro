@@ -2,16 +2,12 @@
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
-import ProjectCard from '../components/ProjectCard.astro';
+import ExperienceVerticals from '../components/ExperienceVerticals.astro';
 import site from '../../content/site.json';
 import portrait from '../assets/portrait.png';
 import { url } from '../lib/url';
 
 const all = await getCollection('projects');
-const featured = all
-  .filter((p) => p.data.featured)
-  .sort((a, b) => a.data.order - b.data.order);
-const shown = featured.length > 0 ? featured : all.slice(0, 3);
 ---
 
 <Base>
@@ -60,17 +56,7 @@ const shown = featured.length > 0 ? featured : all.slice(0, 3);
     ))}
   </section>
 
-  <section>
-    <div class="section-head" data-reveal>
-      <h2>Selected work</h2>
-      <a href={url("/projects/")}>All projects &rarr;</a>
-    </div>
-    <ul class="project-grid">
-      {shown.map((project, i) => (
-        <ProjectCard project={project} delay={i * 90} />
-      ))}
-    </ul>
-  </section>
+  <ExperienceVerticals projects={all} />
 
   <section data-scene="stack">
     <div class="section-head" data-reveal><h2>About</h2></div>
