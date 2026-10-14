@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
+import Contact from '../components/Contact.astro';
 import ExperienceVerticals from '../components/ExperienceVerticals.astro';
 import site from '../../content/site.json';
 import portrait from '../assets/portrait.png';
@@ -26,8 +27,9 @@ const all = await getCollection('projects');
       </p>
       <p class="tagline" data-reveal style="--delay: 220ms">{site.tagline}</p>
       <div class="hero-links" data-reveal style="--delay: 300ms">
+        <a href={`mailto:${site.email}`} class="pill pill-primary">Say hi</a>
         {site.links.map((link) => (
-          <a href={link.url} class={link.primary ? 'pill pill-primary' : 'pill'}>
+          <a href={link.url} class="pill">
             {link.label}
           </a>
         ))}
@@ -132,4 +134,5 @@ const all = await getCollection('projects');
       </ul>
     </div>
   </section>
+  <Contact email={site.email} linkedin={site.links[0]} />
 </Base>
