@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import ProjectCard from '../../components/ProjectCard.astro';
+import ProjectGroups from '../../components/ProjectGroups.astro';
 
 const projects = (await getCollection('projects')).sort(
   (a, b) => b.data.year - a.data.year || a.data.order - b.data.order,
@@ -14,11 +14,6 @@ const projects = (await getCollection('projects')).sort(
     <span>{projects.length} total</span>
   </div>
 
-  {projects.length > 0 ? (
-    <ul class="project-grid">
-      {projects.map((project) => <ProjectCard project={project} />)}
-    </ul>
-  ) : (
-    <p>Nothing here yet.</p>
-  )}
+  <ProjectGroups projects={projects} />
+
 </Base>
