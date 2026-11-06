@@ -18,7 +18,7 @@ const { Content } = await render(project);
 // renamed to avoid shadowing it.
 const {
   title, summary, year, tags, url: liveUrl, repo, cover, coverAlt,
-  deployment, partners, program, status, role,
+  deployment, partners, program, status, role, demoVideo,
 } = project.data;
 
 // Share the project's own cover instead of the generic site card. getImage()
@@ -88,7 +88,7 @@ const facts = [
     </section>
   )}
 
-  {cover && (
+  {cover && !demoVideo && (
     <figure class="detail-media">
       <Image
         src={cover}
@@ -97,6 +97,15 @@ const facts = [
         sizes="(max-width: 56rem) 100vw, 52rem"
         loading="eager"
       />
+    </figure>
+  )}
+
+  {demoVideo && (
+    <figure class="detail-media">
+      <video controls playsinline preload="metadata" poster={ogImage} aria-label={`${title} demonstration`} width="1280" height="720" style="display:block;width:100%;height:auto;border-radius:12px">
+        <source src={url(demoVideo)} type="video/mp4" />
+        <a href={url(demoVideo)}>Download demonstration video</a>
+      </video>
     </figure>
   )}
 
