@@ -162,7 +162,8 @@ story += [
     p("MEHMET DEMIRCI", "NameCV"),
     p("AI SOLUTIONS ENGINEER", "TitleCV"),
     p(
-        "Turkey, UAE & remotely available worldwide &nbsp;&nbsp;·&nbsp;&nbsp; "
+        "Turkey, UAE & remotely available worldwide <br/>"
+        '<link href="mailto:hello@mdemirci.dev" color="#007C83">hello@mdemirci.dev</link> &nbsp;&nbsp;·&nbsp;&nbsp; '
         '<link href="https://www.linkedin.com/in/demirci-m-375532117/" color="#007C83">LinkedIn profile</link>',
         "ContactCV",
     ),
