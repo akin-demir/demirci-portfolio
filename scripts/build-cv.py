@@ -163,7 +163,7 @@ story += [
     p("AI SOLUTIONS ENGINEER", "TitleCV"),
     p(
         "Turkey, UAE & remotely available worldwide &nbsp;&nbsp;·&nbsp;&nbsp; "
-        '<link href="https://www.linkedin.com/in/elhaddad-%F0%9F%92%A1-375532117/?locale=tr-TR" color="#007C83">LinkedIn profile</link>',
+        '<link href="https://www.linkedin.com/in/demirci-m-375532117/" color="#007C83">LinkedIn profile</link>',
         "ContactCV",
     ),
 ]
