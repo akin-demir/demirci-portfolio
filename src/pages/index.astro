@@ -4,12 +4,15 @@ import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import Contact from '../components/Contact.astro';
 import WorkGuard from '../components/WorkGuard.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import projectGroups from '../../content/project-groups.json';
 import ExperienceVerticals from '../components/ExperienceVerticals.astro';
 import site from '../../content/site.json';
 import portrait from '../assets/portrait.png';
 import { url } from '../lib/url';
 
 const all = await getCollection('projects');
+const featuredProducts = all.filter(p => p.data.category === 'product' && p.data.featured && p.id !== 'workguard').sort((a, b) => a.data.order - b.data.order);
 ---
 
 <Base>
@@ -60,6 +63,13 @@ const all = await getCollection('projects');
   </section>
 
   <WorkGuard projectPath="/projects/workguard/" />
+
+  {featuredProducts.length > 0 && (
+    <section>
+      <div class="section-head"><h2>{projectGroups.en.products}</h2></div>
+      <ul class="project-grid">{featuredProducts.map(project => <ProjectCard project={project} />)}</ul>
+    </section>
+  )}
 
   <ExperienceVerticals projects={all} />
 
