@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import { Image, getImage } from 'astro:assets';
+import DemoGallery from '../../components/DemoGallery.astro';
 import Base from '../../layouts/Base.astro';
 import { url } from '../../lib/url';
 
@@ -18,7 +19,7 @@ const { Content } = await render(project);
 // renamed to avoid shadowing it.
 const {
   title, summary, year, tags, url: liveUrl, repo, cover, coverAlt,
-  deployment, partners, program, status, role, demoVideo,
+  deployment, partners, program, status, role, demoVideo, demos,
 } = project.data;
 
 // Share the project's own cover instead of the generic site card. getImage()
@@ -88,7 +89,7 @@ const facts = [
     </section>
   )}
 
-  {cover && !demoVideo && (
+  {cover && !demoVideo && demos.length === 0 && (
     <figure class="detail-media">
       <Image
         src={cover}
@@ -100,7 +101,9 @@ const facts = [
     </figure>
   )}
 
-  {demoVideo && (
+  {demos.length > 0 && <DemoGallery demos={demos} />}
+
+  {demoVideo && demos.length === 0 && (
     <figure class="detail-media">
       <video controls playsinline preload="metadata" poster={ogImage} aria-label={`${title} demonstration`} width="1280" height="720" style="display:block;width:100%;height:auto;border-radius:12px">
         <source src={url(demoVideo)} type="video/mp4" />
